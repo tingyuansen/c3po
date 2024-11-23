@@ -1,112 +1,28 @@
+---
+layout: null
+---
+
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>C3PO</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2024-05-07T11:47:59+08:00</updated>
- <id>http://localhost:4000</id>
+ <title>{{ site.title }}</title>
+ <link href="{{ site.url }}/atom.xml" rel="self"/>
+ <link href="{{ site.url }}/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.url }}</id>
  <author>
-   <name>Yuan-Sen Ting</name>
-   <email></email>
+   <name>{{ site.author.name }}</name>
+   <email>{{ site.author.email }}</email>
  </author>
 
- 
+ {% for post in site.posts %}
  <entry>
-   <title></title>
-   <link href="http://localhost:4000/2024/05/07/"/>
-   <updated>2024-05-07T00:00:00+08:00</updated>
-   <id>http://localhost:4000/2024/05/</id>
-   <content type="html">&lt;h1 id=&quot;introducing&quot;&gt;Introducing&lt;/h1&gt;
-
-&lt;p&gt;The &lt;strong&gt;C3PO (Complete Census of Co-moving Pairs Of stars)&lt;/strong&gt; program observed a comprehensive sample of &lt;strong&gt;125 comoving stellar twin pairs (250 stars)&lt;/strong&gt; in the solar neighborhood. We utilized a combination of the &lt;em&gt;Magellan Telescope&lt;/em&gt;, &lt;em&gt;Keck Telescope&lt;/em&gt;, and the &lt;em&gt;European Southern Observatory’s Very Large Telescope&lt;/em&gt;, totaling approximately &lt;em&gt;15 days&lt;/em&gt; of precious telescope time from these 6-10m telescopes. The observations were conducted using high-resolution spectrographs, achieving resolving powers of &lt;em&gt;R=40,000 to 110,000&lt;/em&gt;. The exposure times were carefully adjusted to ensure a typical &lt;em&gt;signal-to-noise ratio of at least 200 per pixel&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;By leveraging the &lt;em&gt;stellar twin properties&lt;/em&gt; of the two stars in each pair, we performed a meticulous &lt;strong&gt;differential analysis&lt;/strong&gt;, resulting in an impressive &lt;strong&gt;2% precision&lt;/strong&gt; for over &lt;strong&gt;30 elemental abundances&lt;/strong&gt;, including key elements such as &lt;em&gt;Fe, Si, Ni, and O&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Through this program, we aim to gain invaluable insights into the various &lt;strong&gt;astrophysical processes&lt;/strong&gt; that can lead to &lt;strong&gt;chemical inhomogeneity&lt;/strong&gt; between stars in a pair, such as &lt;strong&gt;planet engulfment, atomic diffusion, and inhomogeneities in star-forming gas clouds&lt;/strong&gt;. The C3PO program has pushed the boundaries of our understanding of stellar chemistry and its connection to planetary systems and galactic evolution.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;team&quot;&gt;Team&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td align=&quot;center&quot; width=&quot;33%&quot;&gt;&lt;img src=&quot;figures/Members_Yuan-Sen_Ting.png&quot; alt=&quot;Yuan-Sen Ting&quot; /&gt;&lt;/td&gt;
-    &lt;td align=&quot;center&quot; width=&quot;33%&quot;&gt;&lt;img src=&quot;figures/Members_Fan_Liu.png&quot; alt=&quot;Fan Liu&quot; /&gt;&lt;/td&gt;
-    &lt;td align=&quot;center&quot; width=&quot;33%&quot;&gt;&lt;img src=&quot;figures/Members_David_Yong.png&quot; alt=&quot;David Yong&quot; /&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;strong&gt;Yuan-Sen Ting&lt;/strong&gt;&lt;br /&gt;Lead PI&lt;br /&gt;Australian National University&lt;/td&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;strong&gt;Fan Liu&lt;/strong&gt;&lt;br /&gt;Monash University&lt;/td&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;strong&gt;David Yong&lt;/strong&gt;&lt;br /&gt;Australian National University&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;img src=&quot;figures/Members_Qinghui_Sun.png&quot; alt=&quot;Qinghui Sun&quot; /&gt;&lt;/td&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;img src=&quot;figures/Members_Jie_Yu.png&quot; alt=&quot;Jie Yu&quot; /&gt;&lt;/td&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;img src=&quot;figures/Members_Junhui_Liu.png&quot; alt=&quot;Junhui Liu&quot; /&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;strong&gt;Qinghui Sun&lt;/strong&gt;&lt;br /&gt;Tsinghua University&lt;/td&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;strong&gt;Jie Yu&lt;/strong&gt;&lt;br /&gt;Australian National University&lt;/td&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;strong&gt;Junhui Liu&lt;/strong&gt;&lt;br /&gt;Xiamen University&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;key-results-1-comoving-stars-are-conatal&quot;&gt;Key Results 1: Comoving Stars are Conatal&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://doi.org/10.1093/mnras/stad2679&quot;&gt;Yong, Liu, Ting, et al., 2023, MNRAS, 526, 2181&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td align=&quot;center&quot;&gt;&lt;img src=&quot;figures/Figure_Paper1.png&quot; alt=&quot;Spatial Separation vs. Velocity Separation&quot; width=&quot;100%&quot; /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;The figure above shows the relationship between spatial separation (Δs) and velocity separation (Δv) for the co-moving pairs of stars. The symbol sizes are scaled relative to the abundance difference between the two stars in a given pair. Chemically homogeneous and inhomogeneous co-moving pairs are denoted using blue and red symbols, respectively. Theoretical predictions for the conatal fraction from the Kamdar et al. (2019) simulations are shown in the background.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Our study, published in the &lt;strong&gt;Monthly Notices of the Royal Astronomical Society&lt;/strong&gt;, provides &lt;em&gt;conclusive evidence&lt;/em&gt; that comoving stars are indeed &lt;em&gt;conatal&lt;/em&gt;, sharing the same &lt;em&gt;birthplace&lt;/em&gt; and &lt;em&gt;initial chemical composition&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;We discovered that a spatial separation of &lt;strong&gt;Δs = 10&lt;sup&gt;6&lt;/sup&gt; au&lt;/strong&gt; (approximately 4.8 pc) serves as a &lt;em&gt;boundary&lt;/em&gt; between &lt;em&gt;chemically homogeneous&lt;/em&gt; and &lt;em&gt;inhomogeneous&lt;/em&gt; pairs. For separations below this threshold, the &lt;strong&gt;majority of comoving pairs (70%)&lt;/strong&gt; are chemically homogeneous, indicating a &lt;em&gt;shared origin&lt;/em&gt; and &lt;em&gt;conatal nature&lt;/em&gt;. In contrast, for separations larger than 10&lt;sup&gt;6&lt;/sup&gt; au, only a &lt;strong&gt;minority of pairs (18%)&lt;/strong&gt; exhibit chemical homogeneity, suggesting the presence of &lt;em&gt;chance alignments&lt;/em&gt; or &lt;em&gt;non-conatal associations&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;We found &lt;strong&gt;no obvious trend&lt;/strong&gt; between the fraction of chemically homogeneous pairs and their &lt;em&gt;velocity separation&lt;/em&gt; (Δv). This finding confirms and extends the work of &lt;strong&gt;Kamdar et al. (2019)&lt;/strong&gt;, suggesting that the chemical homogeneity of comoving pairs is primarily determined by their &lt;em&gt;spatial proximity&lt;/em&gt; rather than their &lt;em&gt;kinematic properties&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;These results have important implications for our understanding of &lt;strong&gt;star formation&lt;/strong&gt; and the &lt;strong&gt;early evolution of stellar systems&lt;/strong&gt;. By establishing the &lt;em&gt;conatal nature&lt;/em&gt; of closely separated comoving stars, our study paves the way for using these systems as powerful tools to study phenomena that could lead to &lt;em&gt;chemical inhomogeneity&lt;/em&gt; – including &lt;strong&gt;planet engulfment&lt;/strong&gt;, which is the study in our subsequent paper below.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;key-results-2-at-least-one-in-a-dozen-stars-engulfed-planetary-material&quot;&gt;Key Results 2: At Least One in a Dozen Stars Engulfed Planetary Material&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://rdcu.be/dBUjl&quot;&gt;Liu, Ting, Yong, et al., 2024, Nature, 627, 501&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td align=&quot;center&quot;&gt;&lt;img src=&quot;figures/Figure_Paper2.png&quot; alt=&quot;Elemental Abundance Differences&quot; width=&quot;80%&quot; /&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      The figure above illustrates the elemental abundance differences between the co-natal star pair. It highlights how the observed abundance data compares against various models that explain changes in elemental composition. The planetary engulfment model closely matches the observed data. This alignment suggests that one of the stars has ingested planetary material, significantly affecting its chemical composition. The calculated Bayesian evidence, Δln(Z), indicates that the differences in chemical composition between these stars are best explained by the ingestion of planetary material, rather than by other processes such as atomic diffusion.
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Our recent publication in &lt;strong&gt;Nature, featured on its cover&lt;/strong&gt;, provides compelling evidence for the widespread phenomenon of planetary material ingestion by stars, as evidenced by distinct chemical signatures. We found that approximately one in twelve pairs of co-natal stars exhibits this chemical inhomogeneity, indicating a &lt;strong&gt;notable frequency of planetary ingestion&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Enabled by high-resolution chemical analyses within the C3PO initiative, this research facilitated the detection of subtle differences in stellar chemical compositions.&lt;/p&gt;
-
-&lt;p&gt;Using a Bayesian analytical framework, we differentiated the signatures of planetary ingestion from &lt;strong&gt;other potential sources&lt;/strong&gt; of chemical variation, such as atomic diffusion. This methodological approach demonstrated that the observed chemical anomalies align most closely with scenarios of planetary ingestion.&lt;/p&gt;
-
-&lt;p&gt;These findings offer substantial insights into the processes of planet formation and the subsequent dynamical interactions that may lead to planets being ingested by their host stars. These insights are critical for our understanding of the &lt;strong&gt;lifecycle of planetary systems&lt;/strong&gt; and the mechanisms that may &lt;strong&gt;destabilize them&lt;/strong&gt;.&lt;/p&gt;
-</content>
+   <title>{{ post.title }}</title>
+   <link href="{{ site.url }}{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>{{ site.url }}{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
- 
+ {% endfor %}
 
 </feed>
